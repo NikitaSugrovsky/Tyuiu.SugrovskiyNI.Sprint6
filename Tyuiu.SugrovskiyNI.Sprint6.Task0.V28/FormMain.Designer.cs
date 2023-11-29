@@ -35,13 +35,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.textBoxTask = new System.Windows.Forms.GroupBox();
+            this.textBoxT = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxVarX = new System.Windows.Forms.TextBox();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.textBoxT = new System.Windows.Forms.TextBox();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.textBoxTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,17 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
             this.textBoxTask.TabIndex = 0;
             this.textBoxTask.TabStop = false;
             this.textBoxTask.Text = "Условие";
+            // 
+            // textBoxT
+            // 
+            this.textBoxT.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxT.Location = new System.Drawing.Point(0, 21);
+            this.textBoxT.Multiline = true;
+            this.textBoxT.Name = "textBoxT";
+            this.textBoxT.ReadOnly = true;
+            this.textBoxT.Size = new System.Drawing.Size(309, 204);
+            this.textBoxT.TabIndex = 5;
+            this.textBoxT.Text = "Вычислить выражение по формуле";
             // 
             // pictureBox1
             // 
@@ -118,17 +129,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
             this.buttonDone.UseVisualStyleBackColor = true;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // textBoxT
-            // 
-            this.textBoxT.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxT.Location = new System.Drawing.Point(0, 21);
-            this.textBoxT.Multiline = true;
-            this.textBoxT.Name = "textBoxT";
-            this.textBoxT.ReadOnly = true;
-            this.textBoxT.Size = new System.Drawing.Size(309, 204);
-            this.textBoxT.TabIndex = 5;
-            this.textBoxT.Text = "Вычислить выражение по формуле";
-            // 
             // buttonHelp
             // 
             this.buttonHelp.Location = new System.Drawing.Point(562, 407);
@@ -155,6 +155,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "Спринт 6 | Таск 0 | Вариант 28 | Сугровский.Н.И";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.textBoxTask.ResumeLayout(false);
             this.textBoxTask.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -175,9 +176,9 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBoxVarX;
-        private System.Windows.Forms.Button buttonDone;
         private System.Windows.Forms.TextBox textBoxT;
         private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonDone;
     }
 }
 

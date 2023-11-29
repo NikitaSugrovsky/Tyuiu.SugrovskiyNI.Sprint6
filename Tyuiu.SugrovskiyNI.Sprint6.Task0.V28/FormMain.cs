@@ -52,5 +52,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task0.V28
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
