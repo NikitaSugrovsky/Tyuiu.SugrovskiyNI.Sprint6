@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using tyuiu.cources.programming.interfaces.Sprint6;
 
-namespace Tyuiu.SugrovskiyNI.Sprint6.Task1.V8.Lib
+namespace Tyuiu.SugrovskiyNI.Sprint6.Task2.V8.Lib
 {
-    public class DataService : ISprint6Task1V8
+    public class DataService : ISprint6Task2V8
     {
         public double[] GetMassFunction(int startValue, int stopValue)
-
         {
             double[] valueArray;
             int len = (stopValue - startValue) + 1;
@@ -26,7 +25,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task1.V8.Lib
 
                 else
                 {
-                    y = (Math.Cos(x) / (x - 0.4)) + (Math.Sin(x) * 8 * x) + 2;
+                    y = Math.Cos(2 * x) + Math.Sin(x) / (x + 2.5) + 2 * x;
                 }
 
                 y = Math.Round(y, 2);
