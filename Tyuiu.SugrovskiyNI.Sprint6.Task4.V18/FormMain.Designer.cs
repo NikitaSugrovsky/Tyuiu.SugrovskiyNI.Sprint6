@@ -30,12 +30,14 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxStartStep = new System.Windows.Forms.TextBox();
+            this.textBoxStopStep = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.chartFunction = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxStopStep = new System.Windows.Forms.TextBox();
-            this.textBoxStartStep = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1303, 106);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox3
             // 
@@ -96,6 +97,22 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ввод данных";
+            // 
+            // textBoxStartStep
+            // 
+            this.textBoxStartStep.Location = new System.Drawing.Point(14, 45);
+            this.textBoxStartStep.Multiline = true;
+            this.textBoxStartStep.Name = "textBoxStartStep";
+            this.textBoxStartStep.Size = new System.Drawing.Size(152, 31);
+            this.textBoxStartStep.TabIndex = 5;
+            // 
+            // textBoxStopStep
+            // 
+            this.textBoxStopStep.Location = new System.Drawing.Point(222, 45);
+            this.textBoxStopStep.Multiline = true;
+            this.textBoxStopStep.Name = "textBoxStopStep";
+            this.textBoxStopStep.Size = new System.Drawing.Size(152, 31);
+            this.textBoxStopStep.TabIndex = 4;
             // 
             // label2
             // 
@@ -152,7 +169,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(3, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(586, 102);
             this.groupBox2.TabIndex = 0;
@@ -162,7 +179,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(3, 21);
+            this.textBox2.Location = new System.Drawing.Point(10, 21);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -214,18 +231,18 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             this.chartFunction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartFunction.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartFunction.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartFunction.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartFunction.Legends.Add(legend1);
             this.chartFunction.Location = new System.Drawing.Point(270, 0);
             this.chartFunction.Name = "chartFunction";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartFunction.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartFunction.Series.Add(series1);
             this.chartFunction.Size = new System.Drawing.Size(1033, 548);
             this.chartFunction.TabIndex = 0;
             this.chartFunction.Text = "chart1";
@@ -240,22 +257,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
             this.panel2.Size = new System.Drawing.Size(1303, 548);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // textBoxStopStep
-            // 
-            this.textBoxStopStep.Location = new System.Drawing.Point(222, 45);
-            this.textBoxStopStep.Multiline = true;
-            this.textBoxStopStep.Name = "textBoxStopStep";
-            this.textBoxStopStep.Size = new System.Drawing.Size(152, 31);
-            this.textBoxStopStep.TabIndex = 4;
-            // 
-            // textBoxStartStep
-            // 
-            this.textBoxStartStep.Location = new System.Drawing.Point(14, 45);
-            this.textBoxStartStep.Multiline = true;
-            this.textBoxStartStep.Name = "textBoxStartStep";
-            this.textBoxStartStep.Size = new System.Drawing.Size(152, 31);
-            this.textBoxStartStep.TabIndex = 5;
             // 
             // FormMain
             // 

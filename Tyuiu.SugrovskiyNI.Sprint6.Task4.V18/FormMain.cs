@@ -88,5 +88,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task4.V18
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
