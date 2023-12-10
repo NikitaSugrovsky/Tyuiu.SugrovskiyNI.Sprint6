@@ -11,8 +11,13 @@ using Tyuiu.SugrovskiyNI.Sprint6.Task5.V21.Lib;
 
 namespace Tyuiu.SugrovskiyNI.Sprint6.Task5.V21
 {
+
     public partial class FormMain : Form
     {
+        public FormMain()
+        {
+            InitializeComponent();
+        }
         DataService ds = new DataService();
         string path = @"C:\DataSprint6\InPutFileTask5V21.txt";
 
