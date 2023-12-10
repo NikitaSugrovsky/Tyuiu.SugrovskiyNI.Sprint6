@@ -33,15 +33,15 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task6.V25
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonDone = new System.Windows.Forms.Button();
+            this.FileName = new System.Windows.Forms.Button();
+            this.FormAbout = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBoxLoadFromFile = new System.Windows.Forms.TextBox();
             this.groupBoxOutPutData = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.buttonDone = new System.Windows.Forms.Button();
-            this.FileName = new System.Windows.Forms.Button();
-            this.FormAbout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -69,6 +69,39 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task6.V25
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1223, 81);
             this.panel2.TabIndex = 1;
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.Image = global::Tyuiu.SugrovskiyNI.Sprint6.Task6.V25.Properties.Resources.textblock_1054__1_;
+            this.buttonDone.Location = new System.Drawing.Point(91, 12);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(73, 60);
+            this.buttonDone.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.buttonDone, "Производит поиск");
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
+            // 
+            // FileName
+            // 
+            this.FileName.Image = ((System.Drawing.Image)(resources.GetObject("FileName.Image")));
+            this.FileName.Location = new System.Drawing.Point(6, 12);
+            this.FileName.Name = "FileName";
+            this.FileName.Size = new System.Drawing.Size(79, 60);
+            this.FileName.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.FileName, "Открыть файл");
+            this.FileName.UseVisualStyleBackColor = true;
+            this.FileName.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
+            // FormAbout
+            // 
+            this.FormAbout.Image = global::Tyuiu.SugrovskiyNI.Sprint6.Task6.V25.Properties.Resources.question_icon_205993;
+            this.FormAbout.Location = new System.Drawing.Point(1146, 6);
+            this.FormAbout.Name = "FormAbout";
+            this.FormAbout.Size = new System.Drawing.Size(80, 66);
+            this.FormAbout.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.FormAbout, "Чтобы узнать автора программы");
+            this.FormAbout.UseVisualStyleBackColor = true;
+            this.FormAbout.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // groupBox1
             // 
@@ -117,39 +150,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task6.V25
             this.splitter1.TabIndex = 4;
             this.splitter1.TabStop = false;
             // 
-            // buttonDone
-            // 
-            this.buttonDone.Image = global::Tyuiu.SugrovskiyNI.Sprint6.Task6.V25.Properties.Resources.textblock_1054__1_;
-            this.buttonDone.Location = new System.Drawing.Point(91, 12);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(73, 60);
-            this.buttonDone.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.buttonDone, "Производит поиск");
-            this.buttonDone.UseVisualStyleBackColor = true;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
-            // 
-            // FileName
-            // 
-            this.FileName.Image = ((System.Drawing.Image)(resources.GetObject("FileName.Image")));
-            this.FileName.Location = new System.Drawing.Point(6, 12);
-            this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(79, 60);
-            this.FileName.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.FileName, "Открыть файл");
-            this.FileName.UseVisualStyleBackColor = true;
-            this.FileName.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
-            // FormAbout
-            // 
-            this.FormAbout.Image = global::Tyuiu.SugrovskiyNI.Sprint6.Task6.V25.Properties.Resources.question_icon_205993;
-            this.FormAbout.Location = new System.Drawing.Point(1146, 6);
-            this.FormAbout.Name = "FormAbout";
-            this.FormAbout.Size = new System.Drawing.Size(80, 66);
-            this.FormAbout.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.FormAbout, "Чтобы узнать автора программы");
-            this.FormAbout.UseVisualStyleBackColor = true;
-            this.FormAbout.Click += new System.EventHandler(this.buttonHelp_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -185,7 +185,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task6.V25
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.Text = "Спринт 6 | Такс 6| Вариант 25 | Сугровский Н.И";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -118,7 +118,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task6.V25
             this.MinimizeBox = false;
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAbout";
+            this.Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
