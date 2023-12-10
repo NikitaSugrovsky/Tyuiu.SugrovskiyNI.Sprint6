@@ -31,16 +31,15 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task7.V28.Lib
                 }
             }
 
-            for (int r = 0; r < rows; r++)
+            for (int c = 0; c < columns; c++)
             {
-                if (arrayValues[r, 7] != 13)
+                if (arrayValues[6, c] != 13)
                 {
-                    arrayValues[r, 7] = 0;
+                    arrayValues[6, c] = 0;
                 }
             }
 
             return arrayValues;
-        
         }
     }
 }

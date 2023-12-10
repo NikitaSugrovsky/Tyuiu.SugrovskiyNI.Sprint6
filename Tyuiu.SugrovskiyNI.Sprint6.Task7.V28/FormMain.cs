@@ -66,7 +66,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task7.V28
             {
                 for (int c = 0; c < colums; c++)
                 {
-                    dataGridViewInMatrix.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    dataGridViewOutMatrix.Rows[r].Cells[c].Value = arrayValues[r, c];
                 }
             }
             buttonDone.Enabled = true;
