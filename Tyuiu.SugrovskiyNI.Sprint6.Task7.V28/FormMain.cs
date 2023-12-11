@@ -108,6 +108,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint6.Task7.V28
         {
             saveFileDialogMatrix.FileName = "OutPutFileTask7.csv";
             saveFileDialogMatrix.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialogMatrix.ShowDialog();
 
             string path = saveFileDialogMatrix.FileName;
 
